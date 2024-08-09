@@ -116,11 +116,13 @@ header {
 
 .sidebar nav ul li a:hover {
     background-color: #4c566a;
+    color: #ffc2e0;
 }
 
 .sidebar nav ul li a.active,
 .sidebar nav ul li a.active:hover {
     background-color: #4c566a;
+    color: #ffc2e0;
 }
 
 nav ul {
@@ -250,14 +252,23 @@ main {
     color: #d8dee9;
 }
 
+.experience-heading {
+    font-size: large;
+    line-height: 0.75;
+}
+
 .education-title-year {
     color: #FFFBCC;
     font-weight: bold;
+    font-size: large;
+    line-height: 0.75;
 }
 
 .education-institute-name {
     color: #F5CBA7;
     font-weight: bold;
+    font-size: large;
+    line-height: 0.75;
 }
 
 form {
@@ -352,4 +363,29 @@ section {
 
 .blue-terminal {
     color: #A7C7E7;
+}
+
+.green-emphasis-terminal {
+    color: #B8D8A5; /* Soft, muted green */
+    font-weight: bold;
+}
+
+.green-terminal {
+    color: #B8D8A5; /* Soft, muted green */
+}
+
+.magenta-terminal {
+    color: #E4A4C9; /* Soft magenta */
+}
+
+/* Adjusting the spacing for list items in the Experience section */
+.experience ul {
+    /* list-style-type: none; Remove default list bullets */
+    padding: 0; /* Remove default padding */
+    margin: 1.0em; /* Remove default margin */
+}
+
+.experience li {
+    margin-bottom: 0.7em; /* Add space between list items */
+    line-height: 1.6; /* Improve readability with increased line-height */
 }
