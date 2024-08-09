@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #2e3440;
+    color: #d8dee9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Styles for Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2e3440; /* Terminal background color */
+    color: #d8dee9; /* Terminal text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it's above other content */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    border: none; /* Remove any default border */
+}
+
+#loading-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    /* animation: typing 2s steps(12, end); */
+    border-right: 2px solid #8fbcbb; /* Cursor effect */
+    padding-right: 2px; /* Cursor effect */
+    vertical-align: middle; /* Align vertically with the terminal prompt */
+    margin-top: -3px; /* Fine-tuning to align perfectly */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Hide content initially */
+.content {
+    display: none;
+}
+
+header {
+    width: 100%;
+    background: #3b4252;
+    color: #d8dee9;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.sidebar {
+    width: 200px; /* Width of the sidebar */
+    height: 100vh; /* Full height of viewport */
+    position: fixed; /* Fixed position */
+    left: 0;
+    top: 0;
+    background: #3b4252;
+    color: #d8dee9;
+    padding-top: 20px; /* Optional: Add padding to top */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar img {
+    width: 150px; /* Adjust image width */
+    height: 150px; /* Adjust image height */
+    border-radius: 50%; /* Make image round */
+    margin-bottom: 10px; /* Optional: Add space below image */
+    display: block; /* Ensure image is block-level element */
+    margin: 0 auto; /* Center align the image */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 8px 0;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #d8dee9;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #4c566a;
+}
+
+.sidebar nav ul li a.active,
+.sidebar nav ul li a.active:hover {
+    background-color: #4c566a;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Use inline-block instead of inline */
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    color: #d8dee9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links {
+    margin-top: 100px;
+}
+
+.social-links ul {
+    padding: 0;
+    list-style: none;
+}
+
+.social-links ul li {
+    margin: 5px 0; /* Reduced margin between social media links */
+}
+
+.social-links ul li a {
+    color: #8fbcbb;
+    font-size: 14px; /* Adjusted font size for social media links */
+    font-weight: bold;
+    display: inline-block; /* Ensures links are inline */
+    padding: 8px 12px; /* Adjusted padding for better spacing */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links ul li a:hover {
+    background-color: #4c566a;
+    color: #d8dee9;
+}
+
+.social-links ul li a:focus {
+    outline: none;
+}
+
+main {
+    width: calc(100% - 200px); /* Adjusted to accommodate the fixed sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px; /* Keep the sidebar width for margin */
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+.terminal {
+    width: 85%; /* Adjusted to fit within main without causing overflow */
+    margin: 20px auto; /* Adjusted to center terminal within main */
+    background-color: #3b4252;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border: 4px solid #4c566a;
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4c566a;
+    padding: 10px;
+    border-bottom: 2px solid #2e3440; /* Border at the bottom of header */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 4px solid #4c566a; /* Border left of the header */
+    border-right: 4px solid #4c566a; /* Border right of the header */
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.button.close {
+    background-color: #bf616a;
+}
+
+.button.minimize {
+    background-color: #ebcb8b;
+}
+
+.button.maximize {
+    background-color: #a3be8c;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #d8dee9;
+}
+
+.terminal-body {
+    padding: 20px;
+}
+
+.terminal-prompt {
+    color: #8fbcbb;
+    font-weight: bold;
+}
+
+.project, .interest, .education, .experience {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #434c5e;
+    border-radius: 5px;
+    color: #d8dee9;
+}
+
+.education-title-year {
+    color: #FFFBCC;
+    font-weight: bold;
+}
+
+.education-institute-name {
+    color: #F5CBA7;
+    font-weight: bold;
+}
+
+form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background: #434c5e;
+    padding: 20px;
+    border-radius: 5px;
+    color: #d8dee9;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4c566a;
+    background: #2e3440;
+    color: #d8dee9;
+    margin-bottom: 10px;
+}
+
+form button {
+    background: #8fbcbb;
+    color: #2e3440;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #88c0d0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3b4252;
+    color: #d8dee9;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section styling */
+section {
+    padding: 0px 0; /* Adjusted padding for sections */
+    background-color: #2e3440;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .terminal {
+        width: 90%;
+    }
+}
+
+.orange-emphasis-terminal {
+    color: #F5CBA7;
+    font-weight: bold;
+}
+
+.yellow-emphasis-terminal {
+    color: #FFFBCC;
+    font-weight: bold;
+}
+
+.blue-emphasis-terminal {
+    color: #A7C7E7;
+    font-weight: bold;
+}
+
+.purple-emphasis-terminal {
+    color: #d4bfff;
+    font-weight: bold;
+}
+
+.pink-emphasis-terminal {
+    color: #ffc2e0;
+    font-weight: bold;
+}
+
+.blue-terminal {
+    color: #A7C7E7;
+}
