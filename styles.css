@@ -98,8 +98,8 @@ header {
 }
 
 .sidebar img {
-    width: 150px; /* Adjust image width */
-    height: 150px; /* Adjust image height */
+    /* width: 150px; /* Adjust image width */
+    /* height: 150px; Adjust image height */ 
     border-radius: 50%; /* Make image round */
     margin-bottom: 10px; /* Optional: Add space below image */
     display: block; /* Ensure image is block-level element */
@@ -111,7 +111,8 @@ header {
     height: 150px; /* Default size for larger screens */
     border-radius: 50%;
     border: 6px solid transparent; /* Add a border with gradient */
-    background: linear-gradient(45deg, #4c566a, #d4bfff, #8fbcbb); 
+    /* background: linear-gradient(45deg, #4c566a, #d4bfff, #8fbcbb);  */
+    background: linear-gradient(45deg, #4c566a, #d4bfff, #ffc2e0); /* Gradient border */
     box-shadow: 0 0 0 5px #2e3440;
     border-image-slice: 1;
     object-fit: cover;
@@ -353,12 +354,12 @@ main::-webkit-scrollbar-thumb {
 
 .education-heading {
     font-size: large;
-    line-height: 0.75;
+    line-height: 1.25;
 }
 
 .experience-heading {
     font-size: large;
-    line-height: 0.75;
+    line-height: 1.25;
 }
 
 form {
@@ -496,8 +497,7 @@ section {
     }
 
     .profile-picture {
-        width: 120px; /* Adjust profile picture size */
-        height: 120px; /* Adjust profile picture size */
+        display: none;
     }
 
     header {
@@ -517,6 +517,7 @@ section {
     .sidebar {
         width: 150px; /* Reduce sidebar width for tablets and mobile devices */
         padding-top: 10px; /* Reduce padding at the top */
+        font-size: 0.80rem;
     }
 
     main {
@@ -524,8 +525,8 @@ section {
     }
 
     .profile-picture {
-        width: 50px; /* Adjust profile picture size */
-        height: 50px; /* Adjust profile picture size */
+        width: 100px; /* Adjust profile picture size */
+        height: 100px; /* Adjust profile picture size */
     }
 
     header {
@@ -545,6 +546,7 @@ section {
     .sidebar {
         width: 90px; /* Further reduce sidebar width for small screens */
         padding-top: 5px; /* Further reduce padding at the top */
+        font-size: 0.70rem;
     }
 
     main {
