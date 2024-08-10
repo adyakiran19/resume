@@ -107,15 +107,15 @@ header {
 }
 
 .profile-picture {
-    width: 150px; /* Adjust the width */
-    height: 150px; /* Adjust the height */
-    border-radius: 50%; /* Make the image round */
-    border: 5px solid transparent; /* Set a transparent border */
-    background: linear-gradient(45deg, #4c566a, #d4bfff, #8fbcbb); /* Your color palette */
-    /* background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c0fe, #d5aaff); Gradient colors */
-    background-clip: border-box; /* Ensure gradient shows inside the border */
+    width: 150px; /* Default size for larger screens */
+    height: 150px; /* Default size for larger screens */
+    border-radius: 50%;
+    border: 6px solid transparent; /* Add a border with gradient */
+    background: linear-gradient(45deg, #4c566a, #d4bfff, #8fbcbb); 
     box-shadow: 0 0 0 5px #2e3440;
-    /* box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3); Optional: Add a shadow for a nice effect */
+    border-image-slice: 1;
+    object-fit: cover;
+    transition: width 0.3s, height 0.3s; /* Smooth transition for size change */
 }
 
 /* Ensure the navigation container is centered */
@@ -483,4 +483,88 @@ section {
 .experience li {
     margin-bottom: 0.7em; /* Add space between list items */
     line-height: 1.6; /* Improve readability with increased line-height */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 180px; /* Adjust sidebar width */
+    }
+
+    main {
+        margin-left: 180px; /* Adjust margin to accommodate the sidebar */
+    }
+
+    .profile-picture {
+        width: 120px; /* Adjust profile picture size */
+        height: 120px; /* Adjust profile picture size */
+    }
+
+    header {
+        padding: 15px 0; /* Adjust padding for header */
+    }
+
+    .terminal {
+        width: 95%; /* Adjust width for terminal */
+    }
+
+    .section-content {
+        padding: 15px; /* Adjust padding for section content */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px; /* Reduce sidebar width for tablets and mobile devices */
+        padding-top: 10px; /* Reduce padding at the top */
+    }
+
+    main {
+        margin-left: 150px; /* Adjust margin for the reduced sidebar width */
+    }
+
+    .profile-picture {
+        width: 50px; /* Adjust profile picture size */
+        height: 50px; /* Adjust profile picture size */
+    }
+
+    header {
+        padding: 10px 0; /* Reduce header padding */
+    }
+
+    .terminal {
+        width: 100%; /* Full width for terminal on smaller screens */
+    }
+
+    .section-content {
+        padding: 10px; /* Reduce padding for section content */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 90px; /* Further reduce sidebar width for small screens */
+        padding-top: 5px; /* Further reduce padding at the top */
+    }
+
+    main {
+        margin-left: 100px; /* Adjust margin for the small sidebar width */
+    }
+
+    .profile-picture {
+        width: 50px; /* Further reduce profile picture size */
+        height: 50px; /* Further reduce profile picture size */
+    }
+
+    header {
+        padding: 5px 0; /* Further reduce header padding */
+    }
+
+    .terminal {
+        width: 100%; /* Ensure full width for the terminal */
+    }
+
+    .section-content {
+        padding: 5px; /* Further reduce padding for section content */
+    }
 }
