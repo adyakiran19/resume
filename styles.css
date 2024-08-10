@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap');
 
 html {
     margin: 0;
@@ -7,7 +8,8 @@ html {
 }
 
 body {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'JetBrains Mono', monospace;
+    /* font-family: 'IBM Plex Mono', monospace; */
     background-color: #2e3440;
     color: #d8dee9;
     margin: 0;
@@ -252,6 +254,33 @@ main::-webkit-scrollbar-thumb {
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    position: relative; /* Ensure the tooltip is positioned relative to the button */
+    cursor: pointer; /* Indicate the button is interactive */
+}
+
+/* Tooltip container */
+.button::after {
+    content: attr(data-tooltip); /* Use the content from the data-tooltip attribute */
+    position: relative;
+    top: 190%;
+    transform: translateX(-50%);
+    background-color: #3b4252; /*Tooltip background */
+    color: #d8dee9; /* Tooltip text color */
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap; /* Prevent text wrapping */
+    opacity: 0; /* Hide the tooltip by default */
+    visibility: hidden; /* Prevent tooltip from being accessible */
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Ignore pointer events on tooltip */
+    z-index: 100; /* Ensure tooltip appears above other elements */
+}
+
+/* Show the tooltip on hover */
+.button:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .button.close {
@@ -284,7 +313,7 @@ main::-webkit-scrollbar-thumb {
 
 .project, .interest, .education, .experience {
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
     background: #434c5e;
     border-radius: 5px;
     color: #d8dee9;
@@ -405,6 +434,11 @@ section {
 
 .magenta-terminal {
     color: #E4A4C9; /* Soft magenta */
+}
+
+.magenta-emphasis-terminal {
+    color: #E4A4C9; /* Soft magenta */
+    font-weight: bold;
 }
 
 /* Adjusting the spacing for list items in the Experience section */
