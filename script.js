@@ -49,4 +49,32 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     typeWriter();
+
+    //Load section based on selected
+    const sidebarLinks = document.querySelectorAll('.sidebar nav ul li a');
+    const sections = document.querySelectorAll('.section-content');
+
+    // Function to show the selected section and hide others
+    function showSection(sectionId) {
+        sections.forEach(section => {
+            section.style.display = (section.id === sectionId) ? 'block' : 'none';
+        });
+
+        // Highlight the selected link
+        sidebarLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('data-section') === sectionId);
+        });
+    }
+
+    // Set default section to "About Me"
+    showSection('about');
+
+    // Add click event listeners to sidebar links
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const sectionId = this.getAttribute('data-section');
+            showSection(sectionId);
+        });
+    });
 });

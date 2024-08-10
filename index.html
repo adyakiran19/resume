@@ -31,198 +31,220 @@
 
     <!-- Actual Content -->
     <div class="content" style="display: none;">
-        <div class="sidebar">
-            <img src="profile.jpg" alt="Profile Picture">
-            <h1>Adya's Terminal</h1>
-            <nav>
-                <ul>
+        <aside>
+            <div class="sidebar">
+                <img src="profile.jpg" alt="Profile Picture">
+                <h1>Adya's Terminal</h1>
+                <nav>
+                    <ul>
 
-                    <li><a href="#about" class="nav-link">About Me</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#interests" class="nav-link">Interests</a></li>
-                    <!-- <li><a href="#contact" class="nav-link">Contact</a></li> -->
-                </ul>
-            </nav>
-            <!-- Social Media Links -->
-            <div class="social-links">
-                <ul>
-                    <li>
-                        <a href="https://twitter.com/example" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-twitter"></i> Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://adyakiran.medium.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-medium"></i> Medium
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-square-instagram"></i> Instagram
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com/example" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </li>
-                </ul>
+                        <li><a href="#about" data-section="about" class="nav-link">About Me</a></li>
+                        <li><a href="#education" data-section="education" class="nav-link">Education</a></li>
+                        <li><a href="#experience" data-section="experience" class="nav-link">Experience</a></li>
+                        <li><a href="#interests" data-section="interests" class="nav-link">Interests</a></li>
+                        <!-- <li><a href="#contact" class="nav-link">Contact</a></li> -->
+                    </ul>
+                </nav>
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/example" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://adyakiran.medium.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-medium"></i> Medium
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-square-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/example" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </aside>
+
         <main>
-            <section id="about" class="terminal">
-                <div class="terminal-header">
-                    <div class="buttons">
-                        <div class="button close"></div>
-                        <div class="button minimize"></div>
-                        <div class="button maximize"></div>
+            <div id="about" class="section-content">
+                <section class="terminal">
+                    <div class="terminal-header">
+                        <div class="buttons">
+                            <div class="button close"></div>
+                            <div class="button minimize"></div>
+                            <div class="button maximize"></div>
+                        </div>
+                        <div class="title">About Me</div>
                     </div>
-                    <div class="title">About Me</div>
-                </div>
-                <div class="terminal-body">
-                    <p><span class="terminal-prompt">Adya/AboutMe> </span>./hi
-                        <p style="line-height: 1.8;">
-                            👩‍💻 I am a <span class="orange-emphasis-terminal">Senior Software Engineer at Oracle</span> with over 5 years of experience.
-                        </p>
-                        <p style="line-height: 1.8;">
-                            🎓 Prior to this role, I completed my <span class="orange-emphasis-terminal">Bachelors in Computer Science and Engineering</span> from the <span class="orange-emphasis-terminal">National Institute of Technology Karnataka, Surathkal</span> in India.
-                        </p>
-                        <p style="line-height: 1.8;">
-                            🛠️ I specialize in <span class="orange-emphasis-terminal">full-stack development</span>, adept at seamlessly integrating backend functionality with polished front-end experiences.
-                        </p>
-                        <p style="line-height: 1.8;">
-                            🌍 Beyond coding, I find fulfillment in <span class="orange-emphasis-terminal">nurturing gardens</span>, <span class="orange-emphasis-terminal">traversing the globe</span> and capturing moments through <span class="orange-emphasis-terminal">photography</span>. As an <span class="orange-emphasis-terminal">amateur musician</span> and photographer, I channel creativity into melodies and visuals that mirror my journey. 
-                        </p>  
-                        <p style="line-height: 1.8;">
-                            📜 I have a deep fascination with <span class="orange-emphasis-terminal">ancient Indian knowledge</span>, exploring its wisdom and timeless relevance in today's context. 
-                        </p>
-                        <p style="line-height: 1.8;">
-                            🚀 Join me as I blend technology with personal passions, continuously seeking new insights and growth. 
-                        </p>
-                    </div>
-            </section>
-            
-            <section id="education" class="terminal">
-                <div class="terminal-header">
-                    <div class="buttons">
-                        <div class="button close"></div>
-                        <div class="button minimize"></div>
-                        <div class="button maximize"></div>
-                    </div>
-                    <div class="title">Education</div>
-                </div>
-                <div class="terminal-body">
-                    <p><span class="terminal-prompt">Adya/Education> </span>./education</p>
-                    <div class="education">
-                        <p class="education-title-year">B.Tech Computer Science and Engineering (2019) 👩🏻‍🎓</p>
-                        <p class="education-institute-name">National Institute of Technology Karnataka (NITK), Surathkal</p>
-                        <p>
-                            <ol>
-                                <li>CGPA</li>
-                                <li>Add Info</li>
-                            </ol>
-                        </p>
-                    </div>
-                    <div class="education">
-                        <p class="education-title-year">Grade 12 - All India Senior School Certificate Examination (2015)</p>
-                        <p class="education-institute-name">The Indian High School, Dubai</p>
-                        <p>
-                            <ol>
-                                <li>98%</li>
-                                <li>Country (UAE) Rank 1</li>
-                            </ol>
-                        </p>
-                    </div>
-                </div>
-            </section>
+                    <div class="terminal-body">
+                        <p><span class="terminal-prompt">Adya/AboutMe> </span>./hi
+                            <p style="line-height: 1.8;">
+                                👩‍💻 I am a <span class="orange-emphasis-terminal">Senior Software Engineer at Oracle</span> with over 5 years of experience.
+                            </p>
+                            <p style="line-height: 1.8;">
+                                🎓 Prior to this role, I completed my <span class="orange-emphasis-terminal">Bachelors in Computer Science and Engineering</span> from the <span class="orange-emphasis-terminal">National Institute of Technology Karnataka, Surathkal</span> in India.
+                            </p>
+                            <p style="line-height: 1.8;">
+                                🛠️ I specialize in <span class="orange-emphasis-terminal">full-stack development</span>, adept at seamlessly integrating backend functionality with polished front-end experiences.
+                            </p>
+                            <p style="line-height: 1.8;">
+                                🌍 Beyond coding, I find fulfillment in <span class="orange-emphasis-terminal">nurturing gardens</span>, <span class="orange-emphasis-terminal">traversing the globe</span> and capturing moments through <span class="orange-emphasis-terminal">photography</span>. As an <span class="orange-emphasis-terminal">amateur musician</span> and photographer, I channel creativity into melodies and visuals that mirror my journey. 
+                            </p>  
+                            <p style="line-height: 1.8;">
+                                📜 I have a deep fascination with <span class="orange-emphasis-terminal">ancient Indian knowledge</span>, exploring its wisdom and timeless relevance in today's context. 
+                            </p>
+                            <p style="line-height: 1.8;">
+                                🚀 Join me as I blend technology with personal passions, continuously seeking new insights and growth. 
+                            </p>
+                        </div>
+                </section>
+            </div>
 
-            <section id="experience" class="terminal">
-                <div class="terminal-header">
-                    <div class="buttons">
-                        <div class="button close"></div>
-                        <div class="button minimize"></div>
-                        <div class="button maximize"></div>
+            <div id="education" class="section-content">
+                <section class="terminal">
+                    <div class="terminal-header">
+                        <div class="buttons">
+                            <div class="button close"></div>
+                            <div class="button minimize"></div>
+                            <div class="button maximize"></div>
+                        </div>
+                        <div class="title">Education</div>
                     </div>
-                    <div class="title">Experience</div>
-                </div>
-                <div class="terminal-body">
-                    <p><span class="terminal-prompt">Adya/Experience> </span>./experience</p>
-                    <div class="experience">
-                        <p class="experience-heading"><span class="yellow-emphasis-terminal">Senior Software Engineer</span><span class="pink-emphasis-terminal"> @Oracle</span></p>
-                        <p class="experience-heading">>> <span class="orange-emphasis-terminal">Hyderabad, India</span> | <span class="purple-emphasis-terminal">March 2023 - Present</span></p>
-                        <p>
-                            <ul>
-                                <li>Enhanced customer security by upgrading the encryption algorithm for storing passwords in connections, ensuring robust protection. Achieved this without any regressions or bugs.</li>
-                                <li>Designed and implemented streamlined URL redirection mechanisms for application pages, facilitating effortless link sharing via messages and emails, and enhancing user experience and accessibility.</li>
-                                <li>Leading the project to redesign the customer feel and experience of our application, in efforts to modernize the interface.
-                                    <!-- <ul>
-                                        <li>Subpoint</li>
-                                    </ul> -->
-                                </li>
-                                <li>Developed a framework for granular role management, enabling precise control of page access based on bucket and granular roles, enhancing security and user-specific permissions.</li>
-                                <li>Received deep appreciation for exceptional project management skills and reliability as a key contact for expertise areas, serving as a trusted point of contact for various teams.</li>
-                                <li>Mentored new team members, facilitating smooth onboarding and integration.</li>
-                                <li>Secured third place at <span class="magenta-terminal">Gweek Talks 2024 Conference</span> for the innovative idea <span class="magenta-terminal">'OnboardAI: Turning Code Chaos into Conversations'</span>, showcasing code navigation through conversational AI.</li>
-                                <li><span class="green-emphasis-terminal">Patents: </span>2 ongoing patent work</li>
-                            </ul>
-                        </p>
+                    <div class="terminal-body">
+                        <p><span class="terminal-prompt">Adya/Education> </span>./education</p>
+                        <div class="education">
+                            <p class="education-heading"><span class="yellow-emphasis-terminal">B.Tech Computer Science and Engineering (2019)👩🏻‍🎓</span></p>
+                            <p class="education-heading">>> <span class="orange-emphasis-terminal">National Institute of Technology Karnataka (NITK), Surathkal</span></p>
+                            <p>
+                                <ul>
+                                    <li><span class="pink-emphasis-terminal">CGPA: </span>CGPA</li>
+                                    <li><span class="green-emphasis-terminal">Selected Courses: </span>CGPA</li>
+                                    <li><span class="purple-emphasis-terminal">Selected Projects:</span> 
+                                        <ul>
+                                            <li>Blockchain based Data Access Control using Smart Contracts | TENCON 2019</li>
+                                            <li>Implementation of Bazaar-Blockchain in Ethereum: A Blockchain for Bazaar-Based Cloud
+                                                Markets</li>
+                                            <li>Coastline Erosion detection using LANDSAT Images</li>
+                                            <li>Image Processing for corrosion assessment of ship parts</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="education">
+                            <p class="education-heading"><span class="yellow-emphasis-terminal">Grade 12 - All India Senior School Certificate Examination (2015)</span></p>
+                            <p class="education-heading">>> <span class="orange-emphasis-terminal">The Indian High School, Dubai</span></p>
+                            <p>
+                                <ul>
+                                    <li>98% in CBSE Grade 12 examinations</li>
+                                    <li>Secured Rank 1 in the United Arab Emirates (UAE)</li>
+                                    <li><span class="green-emphasis-terminal">Subjects: </span>Physics, Chemistry, Mathematics, Computer Science, English Core</li>
+                                    <li><span class="purple-emphasis-terminal">Project:</span> Spell Checker for text files using Python 2.0</li>
+                                </ul>
+                            </p>
+                        </div>
                     </div>
-                    <div class="experience">
-                        <p class="experience-heading"><span class="yellow-emphasis-terminal">Applications Engineer</span><span class="pink-emphasis-terminal"> @Oracle</span></p>
-                        <p class="experience-heading">>> <span class="orange-emphasis-terminal">Hyderabad, India</span> | <span class="purple-emphasis-terminal">June 2019 - March 2023</span></p>
-                        <p>
-                            <ul>
-                                <li>Built an SVG Validator to detect non-compliant files, ensuring high asset quality across the product.</li>
-                                <li>Developed a static analysis tool to detect 508 Accessibility Errors in JavaScript files, ensuring compliance with accessibility standards and improving the usability of UI components.</li>
-                                <li>Designed and developed a mechanism to preserve customer customizations on pages, ensuring only "Out-of-Box" updates overwrite names, maintaining user-specific changes across version updates.</li>
-                                <li>Enhanced REST API security by implementing API-key based authentication, allowing secure retrieval of password information upon key validation.</li>
-                                <li>Created a framework for effective client-side caching, enabling secure data storage upon login and automatic removal on logout, enhancing both data security and user experience.</li>
-                                <li>Engineered headerless URLs for product pages and artifacts for seamless embedding of application pages within consumer websites, enabling customers to embed and visualize their data within their websites.</li>
-                                <li>Resolved numerous customer and internal bugs, enhancing product stability and user satisfaction.</li>
-                                <li><span class="green-emphasis-terminal">Patent: </span>System and method for providing on-demand localization in a microservice application environment</li>
-                                <!-- <li>Patent : <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8dOvLQsAAAAJ&citation_for_view=8dOvLQsAAAAJ:d1gkVwhDpl0C">System and method for providing on-demand localization in a microservice application environment</a></li> -->
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="experience">
-                        <p class="experience-heading"><span class="yellow-emphasis-terminal">Technology Intern</span><span class="pink-emphasis-terminal"> @Credit Suisse</span></p>
-                        <p class="experience-heading">>> <span class="orange-emphasis-terminal">Pune, India</span> | <span class="purple-emphasis-terminal">May 2018 - July 2018</span></p>
-                        <p>
-                            <ul>
-                                <li>Developed a blockchain-based Employee Reward system from start to finish using the Corda framework, covering design, architecture and implementation.</li>
-                                <li><span class="blue-emphasis-terminal">Skills: </span>R3 Corda 3.0, Kotlin, REST, Angular</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
 
-            <section id="interests" class="terminal">
-                <div class="terminal-header">
-                    <div class="buttons">
-                        <div class="button close"></div>
-                        <div class="button minimize"></div>
-                        <div class="button maximize"></div>
+            <div id="experience" class="section-content">
+                <section class="terminal">
+                    <div class="terminal-header">
+                        <div class="buttons">
+                            <div class="button close"></div>
+                            <div class="button minimize"></div>
+                            <div class="button maximize"></div>
+                        </div>
+                        <div class="title">Experience</div>
                     </div>
-                    <div class="title">Interests</div>
-                </div>
-                <div class="terminal-body">
-                    <p><span class="terminal-prompt">MyTerminal> </span>Interests</p>
-                    <div class="interest">
-                        <p style="font-weight: bolder;">Coding</p>
-                        <p>I love solving problems and building applications.</p>
+                    <div class="terminal-body">
+                        <p><span class="terminal-prompt">Adya/Experience> </span>./experience</p>
+                        <div class="experience">
+                            <p class="experience-heading"><span class="yellow-emphasis-terminal">Senior Software Engineer</span><span class="pink-emphasis-terminal"> @Oracle</span></p>
+                            <p class="experience-heading">>> <span class="orange-emphasis-terminal">Hyderabad, India</span> | <span class="purple-emphasis-terminal">March 2023 - Present</span></p>
+                            <p>
+                                <ul>
+                                    <li>Enhanced customer security by upgrading the encryption algorithm for storing passwords in connections, ensuring robust protection. Achieved this without any regressions or bugs.</li>
+                                    <li>Designed and implemented streamlined URL redirection mechanisms for application pages, facilitating effortless link sharing via messages and emails, and enhancing user experience and accessibility.</li>
+                                    <li>Leading the project to redesign the customer feel and experience of our application, in efforts to modernize the interface.
+                                        <!-- <ul>
+                                            <li>Subpoint</li>
+                                        </ul> -->
+                                    </li>
+                                    <li>Developed a framework for granular role management, enabling precise control of page access based on bucket and granular roles, enhancing security and user-specific permissions.</li>
+                                    <li>Received deep appreciation for exceptional project management skills and reliability as a key contact for expertise areas, serving as a trusted point of contact for various teams.</li>
+                                    <li>Mentored new team members, facilitating smooth onboarding and integration.</li>
+                                    <li>Secured third place at <span class="magenta-terminal">Gweek Talks 2024 Conference</span> for the innovative idea <span class="magenta-terminal">'OnboardAI: Turning Code Chaos into Conversations'</span>, showcasing code navigation through conversational AI.</li>
+                                    <li><span class="green-emphasis-terminal">Patents: </span>2 ongoing patent work</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="experience">
+                            <p class="experience-heading"><span class="yellow-emphasis-terminal">Applications Engineer</span><span class="pink-emphasis-terminal"> @Oracle</span></p>
+                            <p class="experience-heading">>> <span class="orange-emphasis-terminal">Hyderabad, India</span> | <span class="purple-emphasis-terminal">June 2019 - March 2023</span></p>
+                            <p>
+                                <ul>
+                                    <li>Built an SVG Validator to detect non-compliant files, ensuring high asset quality across the product.</li>
+                                    <li>Developed a static analysis tool to detect 508 Accessibility Errors in JavaScript files, ensuring compliance with accessibility standards and improving the usability of UI components.</li>
+                                    <li>Designed and developed a mechanism to preserve customer customizations on pages, ensuring only "Out-of-Box" updates overwrite names, maintaining user-specific changes across version updates.</li>
+                                    <li>Enhanced REST API security by implementing API-key based authentication, allowing secure retrieval of password information upon key validation.</li>
+                                    <li>Created a framework for effective client-side caching, enabling secure data storage upon login and automatic removal on logout, enhancing both data security and user experience.</li>
+                                    <li>Engineered headerless URLs for product pages and artifacts for seamless embedding of application pages within consumer websites, enabling customers to embed and visualize their data within their websites.</li>
+                                    <li>Resolved numerous customer and internal bugs, enhancing product stability and user satisfaction.</li>
+                                    <li><span class="green-emphasis-terminal">Patent: </span>System and method for providing on-demand localization in a microservice application environment</li>
+                                    <!-- <li>Patent : <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8dOvLQsAAAAJ&citation_for_view=8dOvLQsAAAAJ:d1gkVwhDpl0C">System and method for providing on-demand localization in a microservice application environment</a></li> -->
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="experience">
+                            <p class="experience-heading"><span class="yellow-emphasis-terminal">Technology Intern</span><span class="pink-emphasis-terminal"> @Credit Suisse</span></p>
+                            <p class="experience-heading">>> <span class="orange-emphasis-terminal">Pune, India</span> | <span class="purple-emphasis-terminal">May 2018 - July 2018</span></p>
+                            <p>
+                                <ul>
+                                    <li>Developed a blockchain-based Employee Reward system from start to finish using the Corda framework, covering design, architecture and implementation.</li>
+                                    <li><span class="blue-emphasis-terminal">Skills: </span>R3 Corda 3.0, Kotlin, REST, Angular</li>
+                                </ul>
+                            </p>
+                        </div>
                     </div>
-                    <div class="interest">
-                        <p>Indic Studies</p>
-                        <p>Exploring the rich history and culture of India is one of my passions.</p>
+                </section>
+            </div>
+
+            <div id="interests" class="section-content">
+                <section class="terminal">
+                    <div class="terminal-header">
+                        <div class="buttons">
+                            <div class="button close"></div>
+                            <div class="button minimize"></div>
+                            <div class="button maximize"></div>
+                        </div>
+                        <div class="title">Interests</div>
                     </div>
-                    <div class="interest">
-                        <p>Gardening</p>
-                        <p>Spending time in my garden and growing plants brings me joy.</p>
+                    <div class="terminal-body">
+                        <p><span class="terminal-prompt">MyTerminal> </span>Interests</p>
+                        <div class="interest">
+                            <p style="font-weight: bolder;">Coding</p>
+                            <p>I love solving problems and building applications.</p>
+                        </div>
+                        <div class="interest">
+                            <p>Indic Studies</p>
+                            <p>Exploring the rich history and culture of India is one of my passions.</p>
+                        </div>
+                        <div class="interest">
+                            <p>Gardening</p>
+                            <p>Spending time in my garden and growing plants brings me joy.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
 
             <!-- <section id="contact" class="terminal">
                 <div class="terminal-header">
@@ -248,9 +270,9 @@
             </section> -->
         </main>
 
-        <footer>
+        <!-- <footer>
             <p>&copy; 2024 My Terminal-Themed Website</p>
-        </footer>
+        </footer> -->
     </div>
     <script src="script.js"></script>
 </body>
