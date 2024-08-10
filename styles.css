@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 /* Styles for Loading Screen */
@@ -73,6 +74,7 @@ header {
     text-align: center;
 }
 
+/* Sidebar Styles */
 .sidebar {
     width: 200px; /* Width of the sidebar */
     height: 100vh; /* Full height of viewport */
@@ -83,6 +85,10 @@ header {
     color: #d8dee9;
     padding-top: 20px; /* Optional: Add padding to top */
     overflow-y: auto; /* Enable vertical scrolling if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: space-between; /* Align items from the top */
 }
 
 .sidebar h1 {
@@ -100,21 +106,53 @@ header {
     margin: 0 auto; /* Center align the image */
 }
 
+.profile-picture {
+    width: 150px; /* Adjust the width */
+    height: 150px; /* Adjust the height */
+    border-radius: 50%; /* Make the image round */
+    border: 5px solid transparent; /* Set a transparent border */
+    background: linear-gradient(45deg, #4c566a, #d4bfff, #8fbcbb); /* Your color palette */
+    /* background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c0fe, #d5aaff); Gradient colors */
+    background-clip: border-box; /* Ensure gradient shows inside the border */
+    box-shadow: 0 0 0 5px #2e3440;
+    /* box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3); Optional: Add a shadow for a nice effect */
+}
+
+/* Ensure the navigation container is centered */
+.sidebar nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    width: 100%; /* Full width of sidebar */
+}
+
 .sidebar nav ul {
     list-style: none;
     padding: 0;
+    width: 100%; /* Full width of nav container */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
 }
 
 .sidebar nav ul li {
-    margin: 8px 0;
+    width: 100%; /* Ensure each list item takes full width */
+    text-align: center; /* Center text within list item */
+    margin: 4px 0; /* Margin between items */
 }
 
 .sidebar nav ul li a {
-    display: block;
-    padding: 10px 20px;
+    display: flex; /* Flexbox for uniform size */
+    justify-content: center; /* Center the text */
+    align-items: center; /* Center the text vertically */
+    padding: 10px;
     color: #d8dee9;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    width: 100%; /* Ensure the link takes the full width of the list item */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    border: 2px solid transparent; /* Transparent border initially */
 }
 
 .sidebar nav ul li a:hover {
@@ -126,26 +164,12 @@ header {
 .sidebar nav ul li a.active:hover {
     background-color: #4c566a;
     color: #ffc2e0;
+    border: 2px solid #ffc2e0; /* Highlight the active item with a border */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block; /* Use inline-block instead of inline */
-    margin: 10px 15px;
-}
-
-nav ul li a {
-    color: #d8dee9;
-    text-decoration: none;
-    font-weight: bold;
-}
-
+/* Social Links Styles */
 .social-links {
-    margin-top: 100px;
+    margin-top: 0px; /* Adjust margin as needed */
 }
 
 .social-links ul {
@@ -174,6 +198,14 @@ nav ul li a {
 
 .social-links ul li a:focus {
     outline: none;
+}
+
+.sidebar-footer {
+    text-align: center;
+    color: #d8dee9;
+    font-size: 0.60rem; /* Adjust to make it smaller than the body text */
+    margin-top: auto; /* Push the footer to the bottom */
+    margin-bottom: 5px;
 }
 
 main {
