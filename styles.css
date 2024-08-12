@@ -118,7 +118,7 @@ header {
     border-radius: 50%;
     border: 6px solid transparent; /* Add a border with gradient */
     /* background: linear-gradient(45deg, #4c566a, #d4bfff, #8fbcbb);  */
-    background: linear-gradient(45deg, #4c566a, #d4bfff, #ffc2e0); /* Gradient border */
+    background: linear-gradient(45deg, #4c566a, #d4bfff); /* Gradient border */
     box-shadow: 0 0 0 5px #2e3440;
     border-image-slice: 1;
     object-fit: cover;
@@ -348,6 +348,96 @@ main::-webkit-scrollbar-thumb {
 .terminal-prompt {
     color: #8fbcbb;
     font-weight: bold;
+}
+
+/* Prompt Line Styles */
+.terminal .prompt {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Username Section */
+.terminal .prompt .user {
+    /*background-color: #61afef; /* Light blue background */
+    background-color: #7da2c1;
+    color: #1e1e1e; /* Dark text color */
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+/* Hostname Section */
+.terminal .prompt .host {
+    background-color: #8fbcbb; /* Light green background */
+    color: #1e1e1e; /* Dark text color */
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+/* Current Directory Section */
+.terminal .prompt .directory {
+    background-color: #d0c77f; /* Gold background */
+    color: #1e1e1e; /* Dark text color */
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+/* Git Branch Section */
+.terminal .prompt .git-branch {
+    background-color: #d19a66; /* Tan background */
+    color: #1e1e1e; /* Dark text color */
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+/* Command Line Section */
+.terminal .prompt .command {
+    /*background-color: #abb2bf; /* Light grey background */
+    color: #abb2bf;
+    /*color: #1e1e1e; /* Dark text color */
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Optional Separator */
+.terminal .prompt .separator {
+    color: #56b6c2; /* Cyan color */
+    margin-right: 5px;
+}
+
+/* Example of a Custom Arrow Separator */
+.terminal .prompt .separator::before {
+    content: '❯'; /* Arrow character */
+    margin-right: 5px;
+}
+
+/* Optional Git Status */
+.terminal .prompt .git-status {
+    color: #e06c75; /* Red for dirty, green for clean */
+    margin-left: 5px;
+}
+
+/* Example: Custom Styling for Command */
+.terminal .prompt .command.success {
+    background-color: #3b4252; /* Light grey background */
+    color: #b4bfa2; /* Green for success */
+}
+
+/* Example: Custom Styling for Command */
+.terminal .prompt .command.running {
+    background-color: #3b4252; /* Light grey background */
+    color: #e5c07b; /* Gold for running */
+}
+
+.terminal .prompt .command.error {
+    background-color: #e06c75; /* Red background for error */
+    color: #1e1e1e; /* Dark text color */
 }
 
 .project, .interest, .education, .experience {

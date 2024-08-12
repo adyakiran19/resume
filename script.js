@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const loadingText = "./adyaResume";
+    const loadingText = "Loading ...";
     const loadingElement = document.getElementById('loading-text');
 
     // Clear existing text
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 document.getElementById('loading-screen').style.display = 'none';
                 document.querySelector('.content').style.display = 'block';
-            }, 400); // Adjust delay before hiding loading screen
+            }, 500); // Adjust delay before hiding loading screen
         }
     }
     
