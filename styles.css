@@ -125,6 +125,10 @@ header {
     transition: width 0.3s, height 0.3s; /* Smooth transition for size change */
 }
 
+.sidebar-toggle {
+    display: none; /* Hide hamburger icon by default */
+}
+
 /* Ensure the navigation container is centered */
 .sidebar nav {
     flex-grow: 1;
@@ -582,6 +586,31 @@ section {
     line-height: 1.6; /* Improve readability with increased line-height */
 }
 
+/* General styles for the footer */
+.main-footer {
+    width: 100%; /* Full width */
+    padding: 10px 20px; /* Padding around the content */
+    background-color: #3b4252; /* Background color */
+    color: #d8dee9; /* Text color */
+    text-align: center; /* Center the text */
+    display: none;
+    justify-content: space-around; /* Evenly distribute links */
+    align-items: center; /* Center content vertically */
+}
+
+/* Styles for the social media links */
+.main-footer .social-links {
+    display: flex;
+    gap: 15px; /* Space between links */
+}
+
+.main-footer .social-links a {
+    color: #8fbcbb;
+    font-size: 16px; /* Adjust size for readability */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
 /* Media queries for responsive design */
 @media (max-width: 1024px) {
     .sidebar {
@@ -643,30 +672,115 @@ section {
 
 @media (max-width: 480px) {
     .sidebar {
-        width: 90px; /* Further reduce sidebar width for small screens */
-        padding-top: 5px; /* Further reduce padding at the top */
-        font-size: 0.70rem;
+        width: 100%;
+        height: auto; /* Adjust height to fit content */
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: row; /* Stack items horizontally */
+        padding: 2px 2px;
+        z-index: 110; /* Ensure it stays on top */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        overflow-y: auto; /* Allow vertical scrolling if needed */
     }
 
-    main {
-        margin-left: 100px; /* Adjust margin for the small sidebar width */
+    .sidebar h1 {
+        font-size: 1.0rem;
+        margin: 0;
+        padding: 0;
     }
 
-    .profile-picture {
-        width: 50px; /* Further reduce profile picture size */
-        height: 50px; /* Further reduce profile picture size */
-        border: 3px solid transparent; /* Add a border with gradient */
+    .sidebar nav {
+        display: flex; /* Show navigation items */
+        position: relative;
+        top: 0; /* Adjust as needed */
+        left: 0;
+        width: 100%;
+        background: #3b4252;
+        padding: 10px 0;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        z-index: 115; /* Ensure it appears above other content */
+        overflow-x: auto; /* Ensure items fit within the width */
+        white-space: nowrap; /* Prevent wrapping */
     }
 
-    header {
-        padding: 5px 0; /* Further reduce header padding */
+    .sidebar nav ul {
+        display: flex; /* Align items horizontally */
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        list-style: none; /* Remove list bullets */
+        width: 100%; /* Ensure full width */
+        overflow-x: hidden; /* Allow horizontal scrolling if needed */
+        font-size: 0.8rem;
+    }
+
+    .sidebar nav ul li {
+        flex: 1; /* Allow items to grow and shrink */
+        padding: 5px 0;
+        text-align: center;
+        white-space: nowrap; /* Prevent wrapping */
+    }
+
+    .sidebar nav ul li a {
+        display: block; /* Ensure full width click area */
+        padding: 5px;
+        color: #d8dee9;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    .sidebar nav ul li a:hover {
+        background-color: #4c566a;
+        color: #ffc2e0;
+    }
+
+    .sidebar nav ul li a.active,
+    .sidebar nav ul li a.active:hover {
+        background-color: #4c566a;
+        color: #ffc2e0;
+    }
+
+    .sidebar img, .profile-picture, .sidebar-footer, .social-links {
+        display: none;
     }
 
     .terminal {
-        width: 100%; /* Ensure full width for the terminal */
+        width: 100%;
+        margin: 80px auto; /* Adjusted to center terminal within main */
     }
 
-    .section-content {
-        padding: 5px; /* Further reduce padding for section content */
+    main {
+        margin: 6px 6px 6px 6px; 
+        margin-bottom: 60px;
+    }
+
+    /* Footer Styles */
+    .main-footer {
+        display: flex;
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-around; /* Distribute space around items */
+        align-items: center;
+        background-color: #3b4252;
+        padding: 5px;
+        color: #d8dee9;
+        font-size: 0.75rem;
+        width: 100%; /* Full width of the screen */
+        position: fixed; /* Fixed at the bottom of the screen */
+        bottom: 0;
+        left: 0;
+        z-index: 100; /* Ensure it stays on top of other content */
+        font-size: 0.60rem;
+    }
+
+    .main-footer a {
+        color: #8fbcbb;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .main-footer a:hover {
+        color: #d8dee9;
     }
 }
